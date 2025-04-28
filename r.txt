@@ -3,3 +3,4 @@ openpyxl
 fuzzywuzzy
 python-Levenshtein
 sentence_transformers
+rapidfuzz
