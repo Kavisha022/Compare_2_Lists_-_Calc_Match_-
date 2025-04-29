@@ -42,7 +42,7 @@ wb = load_workbook(output_path)
 ws = wb.active
 
 # Define fills
-green_fill = PatternFill(start_color="FFFF69B4", end_color="FFFF69B4", fill_type="solid")  # Pink
+pink_fill = PatternFill(start_color="FFFF69B4", end_color="FFFF69B4", fill_type="solid")  # Pink
 blue_fill = PatternFill(start_color="FF87CEEB", end_color="FF87CEEB", fill_type="solid")   # Blue
 yellow_fill = PatternFill(start_color="FFFFFF00", end_color="FFFFFF00", fill_type="solid") # Yellow
 
@@ -53,7 +53,7 @@ for row in ws.iter_rows(min_row=2, min_col=1, max_col=3):
         continue
 
     if score >= 85:
-        fill = green_fill
+        fill = pink_fill
     elif score >= 60:
         fill = blue_fill
     else:
