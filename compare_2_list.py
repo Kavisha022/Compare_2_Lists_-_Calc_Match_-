@@ -64,3 +64,14 @@ for row in ws.iter_rows(min_row=2, min_col=1, max_col=3):
 
 wb.save(output_path)
 print(f"✅ Strict word-to-word matching complete! File saved to:\n{output_path}")
+
+# Track unique matched words from Sheet1
+matched_words_sheet1 = set([match[0] for match in matches])
+
+# Calculate accuracy
+total_words_sheet1 = len(list1)
+matched_count = len(matched_words_sheet1)
+
+accuracy = (matched_count / total_words_sheet1) * 100
+print(f"Accuracy: {accuracy:.2f}%")
+
