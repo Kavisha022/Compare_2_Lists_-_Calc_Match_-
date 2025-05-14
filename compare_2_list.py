@@ -4,8 +4,8 @@ from openpyxl.styles import PatternFill
 from rapidfuzz import fuzz, distance
 
 # Paths
-file_path = r'D:\OneDrive - Lowcode Minds Technology Pvt Ltd\Desktop\Compare two list\dataset.xlsx'
-output_path = r'D:\OneDrive - Lowcode Minds Technology Pvt Ltd\Desktop\Compare two list\matches_output.xlsx'
+file_path = r'D:\OneDrive - Lowcode Minds Technology Pvt Ltd\Desktop\Compare two list\RDW.xlsx'
+output_path = r'D:\OneDrive - Lowcode Minds Technology Pvt Ltd\Desktop\Compare two list\RWD_output.xlsx'
 
 # Read data
 sheet1 = pd.read_excel(file_path, sheet_name='Sheet1')
@@ -18,7 +18,7 @@ list2 = sheet2.iloc[:, 0].dropna().tolist()
 matches = []
 
 # Set maximum edit distance allowed
-max_distance = 2
+max_distance = 4
 
 # Compare every word in Sheet1 with Sheet2
 for word1 in list1:
